@@ -1,0 +1,27 @@
+{
+  "name": "codeit-nextjs-todolist",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:next": "next dev -p 3000",
+    "dev:json": "npx json-server db.json --port 4000",
+    "dev": "concurrently -n NEXT,JSON -c auto \"npm:dev:next\" \"npm:dev:json\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "next": "15.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "concurrently": "^9.2.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3",
+    "tailwindcss": "^4"
+  }
+}
